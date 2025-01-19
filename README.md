@@ -3,7 +3,7 @@ Este es un pequeño proyecto personal que utiliza Selenium para automatizar la i
 
 ## Explicacion de los codigos:
 
-#### 1.-SteamDb-Scraping.py
+### 1.-SteamDb-Scraping.py
 Este codigo nos permite sacar informacion de la pagina [SteamDb/charts](https://steamdb.info/charts/) extrayendo la informacion de las paginas 1 al 80 
 #### Paso a paso del Codigo
 
@@ -65,7 +65,7 @@ Para terminar y lograr ejecutar el programa se abre la terminal y se inicia con 
 py SteamDb-Scraping.py
 ```
 
-#### 2.-SteamDb-Uni.py
+### 2.-SteamDb-Uni.py
 Este segundo codigo nos permite sacar la informacion de cada juego ingresando y extrayendo los datos
 
 #### Paso a paso del Codigo
