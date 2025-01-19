@@ -14,7 +14,7 @@ pip install pandas
 ```
 Una vez instalados los programas se procede a importar las librerias.
 
-
+```python
 	from selenium import webdriver
 	#"By" es esencial en Selenium para especificar cómo localizar elementos en una página web.
 	from selenium.webdriver.common.by import By
@@ -24,15 +24,16 @@ Una vez instalados los programas se procede a importar las librerias.
 	driver = webdriver.Chrome()  # Crea una instancia del navegador Chrome
 	url = "https://steamdb.info/charts/"  # Define la URL de la página web a visitar
 	driver.get(url)  # Abre el navegador y carga la página especificada
-
+```
 Una vez se termina de configrar el navegador especificaremos donde se guardaran los datos que sacaremos
-
+```python
 	listanombre=[]
 	listaactivos=[]
 	lista24h=[]
 	listapico=[]
+```
 Ahora veremos el codigo que usaremos para extraer la informacion en este caso usaremos 2 ciclos for 
-
+```python
 	for num in range(1, 40):  # Recorre los números del 1 al 39 (rango de 1 a 40 sin incluir el 40)
  
 		pagina = driver.find_element(By.XPATH, f'//button[contains(text(),{num})]')  # Encuentra el botón con el número actual en el texto
@@ -50,9 +51,9 @@ Ahora veremos el codigo que usaremos para extraer la informacion en este caso us
 			listaactivos.append(activos.text)  # Añade el número de jugadores activos a la lista 'listaactivos'
 			lista24h.append(pico24.text)  # Añade el pico de jugadores en las últimas 24 horas a la lista 'lista24h'
 			listapico.append(picoH.text)  # Añade el pico histórico de jugadores a la lista 'listapico'
-
-Finalmente todos los datos obtenidos por el programa se guadaran en un archivo csv para su uso.
 ```
+Finalmente todos los datos obtenidos por el programa se guadaran en un archivo csv para su uso.
+```python
 datosunidos = {'Nombre': listanombre, 'Jugadores Activos': listaactivos, 'Pico de 24H': lista24h, 'Pico Historico': listapico}  # Crea un diccionario con los datos recopilados
 df = pd.DataFrame(datosunidos, columns=['Nombre', 'Jugadores Activos', 'Pico de 24H', 'Pico Historico'])  # Convierte el diccionario a un DataFrame de pandas
 print(df)  # Muestra el DataFrame por consola
