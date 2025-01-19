@@ -8,10 +8,10 @@ Este codigo nos permite sacar informacion de la pagina [SteamDb/charts](https://
 #### Paso a paso del Codigo
 
 se procede a instalar las librerias que usaremos  para el web scraping 
-
-		pip install selenium
-		pip install pandas
-
+```python
+pip install selenium
+pip install pandas
+```
 Una vez instalados los programas se procede a importar las librerias.
 
 
