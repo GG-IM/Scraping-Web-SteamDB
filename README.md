@@ -84,9 +84,9 @@ from seleniumbase import SB
 ```
 
 Una vez se importa los datos procedemos declarar la web que se va utilizar
-`uc=True:`: Activa el "modo undetected-chromedriver", lo que significa que intenta evitar que los sitios web detecten el uso de herramientas de automatización como Selenium.
-`test=True:` Activa el modo de pruebas, que podría implicar funcionalidades adicionales como registros o simulaciones específicas para depurar o verificar el código.
-`disable_csp=True:` Desactiva la "Política de Seguridad de Contenidos" (Content Security Policy). Esto permite cargar scripts y recursos que de otro modo estarían bloqueados por restricciones del sitio web.
+-`uc=True:`: Activa el "modo undetected-chromedriver", lo que significa que intenta evitar que los sitios web detecten el uso de herramientas de automatización como Selenium.
+-`test=True:` Activa el modo de pruebas, que podría implicar funcionalidades adicionales como registros o simulaciones específicas para depurar o verificar el código.
+-`disable_csp=True:` Desactiva la "Política de Seguridad de Contenidos" (Content Security Policy). Esto permite cargar scripts y recursos que de otro modo estarían bloqueados por restricciones del sitio web.
 
 ```python
 	driver = webdriver.Chrome()  # Crea una instancia del navegador Chrome
@@ -94,9 +94,9 @@ Una vez se importa los datos procedemos declarar la web que se va utilizar
 	driver.get(url)  # Abre el navegador y carga la página especificada
 ```
 Procedemos a realizar una funcion para poder llamarla luego y acortar el codigo
-`find_element` es un método utilizado para localizar un solo elemento en el DOM (Document Object Model) de una página web. 
-`.text` esta propiedad obtiene el texto visible dentro del elemento HTML seleccionado.
-`.strip()` es un método de cadenas en Python que elimina los espacios en blanco al principio y al final de una cadena de texto.
+-`find_element` es un método utilizado para localizar un solo elemento en el DOM (Document Object Model) de una página web. 
+-`.text` esta propiedad obtiene el texto visible dentro del elemento HTML seleccionado.
+-`.strip()` es un método de cadenas en Python que elimina los espacios en blanco al principio y al final de una cadena de texto.
 ```python
 def obtener_texto_o_null(xpath):  
     try:  
@@ -132,10 +132,10 @@ Para no tener problemas se procede a selecionar todos los elementos de SteamDB
     todolosdatos.click()
 ```
 Ahora veremos la parte de la extraccion de datos parte por parte
-`.uc_click` es un método especializado para hacer clic en un elemento sin ser detectado como un bot, en automatización web.
-`.sleep` es una función de la biblioteca estándar de Python que hace que el programa se detenga por un período específico de tiempo, en segundos.
-`.append`  es un método de listas en Python que se utiliza para agregar un elemento al final de una lista.
-`.go_back`  simula que el navegador navega hacia la página anterior (como presionar el botón de "Atrás" en un navegador).
+-`.uc_click` es un método especializado para hacer clic en un elemento sin ser detectado como un bot, en automatización web.
+-`.sleep` es una función de la biblioteca estándar de Python que hace que el programa se detenga por un período específico de tiempo, en segundos.
+-`.append`  es un método de listas en Python que se utiliza para agregar un elemento al final de una lista.
+-`.go_back`  simula que el navegador navega hacia la página anterior (como presionar el botón de "Atrás" en un navegador).
 ```python
     for i in range(1,4):# esta parte nos muestra desde que lugar queremos que inicie la extraccion desde el 1 hasta el 4 elementos si deseamos podemos cambiar a los numeros que queramos
         sb.uc_click(f"tr:nth-of-type({i}) td a", 2) 
