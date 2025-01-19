@@ -59,3 +59,7 @@ df = pd.DataFrame(datosunidos, columns=['Nombre', 'Jugadores Activos', 'Pico de 
 print(df)  # Muestra el DataFrame por consola
 df.to_csv('datos_steam.csv', index=False)  # Guarda el DataFrame como un archivo CSV sin el índice
 ```
+Para terminar y lograr ejecutar el programa se abre la terminal y se inicia con el nombre
+```python
+py SteamDb-Scraping.py
+```
